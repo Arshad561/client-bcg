@@ -1,0 +1,123 @@
+{
+  "title": "Update Insurance",
+  "type": "object",
+  "properties": {
+    "policyId": {
+      "type": "string",
+      "title": "Policy Id",
+      "readOnly": true
+    },
+    "customerId": {
+      "type": "string",
+      "title": "Customer Id"
+    },
+    "date": {
+      "type": "string",
+      "title": "Date (mm/dd/yyyy)",
+      "format": "date",
+      "readOnly": true
+    },
+    "premium": {
+      "type": "number",
+      "title": "Premium",
+      "minimum": 1,
+      "maximum": 1000000
+    },
+    "vehicleSegment": {
+      "enum": [
+        "A",
+        "B",
+        "C"
+      ],
+      "title": "Vehicle Segment"
+    },
+    "fuel": {
+      "enum": [
+        "CNG",
+        "Petrol",
+        "Diesel"
+      ],
+      "title": "Fuel"
+    },
+    "bodilyInjuryLiability": {
+      "enum": [true, false],
+      "enumNames": [
+        "True",
+        "False"
+      ],
+      "title": "Bodily Injury Liability"
+    },
+    "personalInjuryProtection": {
+      "enum": [true, false],
+      "enumNames": [
+        "True",
+        "False"
+      ],
+      "title": "Personal Injury Protection"
+    },
+    "propertyDamageLiability": {
+      "enum": [true, false],
+      "enumNames": [
+        "True",
+        "False"
+      ],
+      "title": "Property Damage Liability"
+    },
+    "collision": {
+      "enum": [true, false],
+      "enumNames": [
+        "True",
+        "False"
+      ],
+      "title": "Collision"
+    },
+    "comprehensive": {
+      "enum": [true, false],
+      "enumNames": [
+        "True",
+        "False"
+      ],
+      "title": "Comprehensive"
+    },
+    "customerGender": {
+      "enum": [
+        "Male",
+        "Female"
+      ],
+      "title": "Customer Gender"
+    },
+    "customerIncomeGroup": {
+      "enum": ["0- $25K", "$25-$70K", ">$70K"],
+      "title": "Customer Income Group"
+    },
+    "customerRegion": {
+      "enum": ["North", "East", "West", "South"],
+      "title": "Customer Region"
+    },
+    "isMarried": {
+      "enum": [true, false],
+      "enumNames": [
+        "True",
+        "False"
+      ],
+      "title": "Is Married ?"
+    }
+  },
+  "required": [
+    "policyId",
+    "customerId",
+    "date",
+    "premium",
+    "vehicleSegment",
+    "fuel",
+    "bodilyInjuryLiability",
+    "personalInjuryProtection",
+    "propertyDamageLiability",
+    "collision",
+    "comprehensive",
+    "customerGender",
+    "customerIncomeGroup",
+    "customerRegion",
+    "isMarried"
+  ]
+}
